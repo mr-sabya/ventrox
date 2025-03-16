@@ -1,0 +1,1 @@
+<a href="javaascript:void(0)" wire:click="logout" class="dropdown-item"><i class="fas fa-power-off"></i> Logout</a>
