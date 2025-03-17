@@ -4,6 +4,6 @@
 
 @section('content')
 <div>
-    <livewire:permission.index />
+    <livewire:role.index />
 </div>
 @endsection

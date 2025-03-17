@@ -21,4 +21,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
     // permission
     Route::get('/permissions', [\App\Http\Controllers\PermissionController::class, 'index'])->name('permission.index');
+
+    // role
+    Route::get('/roles', [\App\Http\Controllers\RoleController::class, 'index'])->name('role.index');
 });

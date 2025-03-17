@@ -21,6 +21,7 @@
     <link href="{{ asset('assets/dist/css/style.min.css') }}" rel="stylesheet">
     <!-- Dashboard 1 Page CSS -->
     <link href="{{ asset('assets/dist/css/pages/dashboard1.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/dist/css/custom.css') }}" rel="stylesheet">
 
 </head>
 
@@ -55,13 +56,13 @@
                 <!-- Bread crumb and right sidebar toggle -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Dashboard 1</h4>
+                        <h4 class="text-themecolor">@yield('title')</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-end">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb justify-content-end">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Dashboard 1</li>
+                                <li class="breadcrumb-item active">@yield('title')</li>
                             </ol>
                         </div>
                     </div>

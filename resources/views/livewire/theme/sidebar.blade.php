@@ -37,13 +37,15 @@
                         <span class="hide-menu">Dashboard</span>
                     </a>
                 </li>
-                <li class="{{ Route::is('permission.index') ? 'active' : '' }}">
-                    <a class="has-arrow waves-effect waves-dark {{ Route::is('permission.index') ? 'active' : '' }}" href="javascript:void(0)" aria-expanded="false"><i class="icon-envelope-open"></i><span class="hide-menu">Role & Permission</span></a>
+                <li class="{{ Route::is('permission.index') || Route::is('role.index') ? 'active' : '' }}">
+                    <a class="has-arrow waves-effect waves-dark {{ Route::is('permission.index') || Route::is('role.index') ? 'active' : '' }}" href="javascript:void(0)" aria-expanded="false"><i class="icon-envelope-open"></i><span class="hide-menu">Role & Permission</span></a>
                     <ul aria-expanded="false" class="collapse">
                         <li class="{{ Route::is('permission.index') ? 'active' : '' }}">
                             <a href="{{ route('permission.index') }}" class="{{ Route::is('permission.index') ? 'active' : '' }}" wire:navigate>Permissions</a>
                         </li>
-                        <li><a href="app-email-detail.html">Mailbox Detail</a></li>
+                        <li class="{{ Route::is('role.index') ? 'active' : '' }}">
+                            <a href="{{ route('role.index') }}" class="{{ Route::is('role.index') ? 'active' : '' }}" wire:navigate>Roles</a>
+                        </li>
                         <li><a href="app-compose.html">Compose Mail</a></li>
                     </ul>
                 </li>
